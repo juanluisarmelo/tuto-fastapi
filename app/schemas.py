@@ -13,7 +13,7 @@ class AssetTypeResponse(BaseModel):
     created_at: datetime
 
     class Config:
-        orm_mode = True
+        from_attributes = True
 
 
 class AssetBase(BaseModel):
@@ -35,7 +35,7 @@ class AssetResponse(AssetBase):
     asset_type: AssetTypeResponse
 
     class Config:
-        orm_mode = True
+        from_attributes = True
 
 
 class UserCreate(BaseModel):
@@ -49,7 +49,7 @@ class UserResponse(BaseModel):
     created_at: datetime
 
     class Config:
-        orm_mode = True
+        from_attributes = True
 
 
 class UserLogin(BaseModel):
